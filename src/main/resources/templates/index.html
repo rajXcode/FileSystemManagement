@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>File System Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<div align="center" class="container">
+    <h2>File System Management</h2>
+    <div class="row">
+        <div class="col-12">
+            <form action="#" th:action="@{/}" th:object="${contact}" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search" th:field="*{search}">
+                    <p class="alert alert-danger" th:if="${#fields.hasErrors('search')}" th:errors="*{search}">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+
+                <div class="form-group" align="left">
+                    <br/>
+                    <div class="alert alert-success col-md-12" th:unless="${#lists.isEmpty(listFilesFolders)}"
+                         role="alert">
+                        <tr th:each="item : ${listFilesFolders}">
+                            <td><p th:text="${item.relativepath}"/></td>
+                        </tr>
+                    </div>
+                    <div class="alert alert-danger" th:if="${#lists.isEmpty(listFilesFolders)}">
+                        <p>No results found.</p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
