@@ -1,4 +1,4 @@
-# FileManagementSystem
+# FileSystemManagement
 Project to handle the changes on the file system.
 Task:	
 1. Create	a	database	design	to	able	to	store	given	file	system	as	above.	
