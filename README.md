@@ -25,7 +25,12 @@ These instructions will get you a copy of the project up and running on your loc
  - JDK 1.8
  - MySQL
 
-Clone or download the repository on your local environment and import the project in IntelliJ IDEA and build the project.
+1. Install MySQL on your machine. You can configure the user and password in application.properties file as per your MySQL credentials.
+2. Create filesystem schema on port 3306.
+3. Clone or download the repository on your local environment and import the project in IntelliJ IDEA and build the project.
+
+## Running the project from IntelliJ IDEA
+Right click on the FileSystemManagementApplication.java file and click on Run 'FileSystemManagementApplication' and see if all is well and server goes up. I have taken the port number as 8081 because 8080 is by default. You can set your desired port in application.properties file.
 
 ## Running the tests from IntelliJ IDEA
 Right click on the FileSystemManagementApplicationTest.java file and click on Run 'FileSystemManagementApplicationTest' and see if all the test cases pass successfully.
